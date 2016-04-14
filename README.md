@@ -1,6 +1,8 @@
 silverstripe-cdnrewrite
 ==========================
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wernerkrauss/silverstripe-cdnrewrite/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wernerkrauss/silverstripe-cdnrewrite/?branch=master)
+
 Rewrites all links for assets to use a cdn instead. It's not responsible to upload or sync the files anywhere. Some CDNs can do this for you.
 
 ## Requirements
@@ -21,7 +23,9 @@ Your config.yml might look like:
 
 ```yml
 CDNRewriteRequestFilter:
-  cdn_rewrite: true
+  cdn_rewrite: true #global switch
   cdn_domain: 'http://cdn.mydomain.com'
+  rewrite_assets: true  #rewrite stuff in assets
+  rewrite_themes: false #do not rewrite stuff in themes folder
 ```
 
